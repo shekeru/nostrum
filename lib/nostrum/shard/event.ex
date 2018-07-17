@@ -10,7 +10,7 @@ defmodule Nostrum.Shard.Event do
   def handle(:dispatch, payload, state) do
     payload = Util.safe_atom_map(payload)
 
-    Logger.debug(payload.t)
+    #Logger.debug(payload.t)
     Producer.notify(Producer, payload, state)
 
     if payload.t == :READY do
