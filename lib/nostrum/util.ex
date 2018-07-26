@@ -208,7 +208,7 @@ defmodule Nostrum.Util do
     String.to_existing_atom(token)
   rescue
     _ ->
-      Logger.debug(fn -> "Converting string to non-existing atom: #{token}" end)
+      # Logger.debug(fn -> "Converting string to non-existing atom: #{token}" end)
       String.to_atom(token)
   end
 
